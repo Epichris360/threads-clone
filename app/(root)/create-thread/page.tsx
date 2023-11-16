@@ -1,4 +1,5 @@
 
+import PostThread from '@/components/forms/PostThread';
 import { fetchUser } from '@/lib/actions/user.actions';
 import { currentUser } from '@clerk/nextjs';
 import { redirect } from 'next/navigation';
@@ -18,7 +19,7 @@ async function Page() {
         Create Thread
       </h1>
 
-      <PostThread userId={userInfo._id} />
+      <PostThread userId={userInfo._id.toString()} />
     </>
   )
 }
